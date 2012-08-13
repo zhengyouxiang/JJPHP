@@ -42,4 +42,5 @@
   4.访问格式为 http://baseurl/index.php/controler-action.api<br>
   或者 http://baseurl/index.php/controler-action<br>
   5.如果要用实例 请执行JJPHPTest.sql</p>
+  6.如果要用实例可以把文件下载下来命名为JJPHPDemo</p>
 <br />
