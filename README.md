@@ -8,7 +8,7 @@
   6.系统采用单例模式<br>
   7.提供了File、DB等种缓存机制<br>
 7.提供常用的类库如Curl、File、Http的等等</p>
-<p>JJPHP开发框架永久开源和免费提供使用,域名 <a href="http:www.111work.com/jjphp/" target="_blank">www.111work.com/jjphp/</a></p>
+<p>JJPHP开发框架永久开源和免费提供使用,域名 <a href="http:www.111work.com/jjphp/" target="_new">www.111work.com/jjphp/</a></p>
 <p>JJPHP框架目录<br>
   | <br>
   |  -config                      配置<br>
