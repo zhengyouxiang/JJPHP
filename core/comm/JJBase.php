@@ -20,10 +20,10 @@ class JJBase
 	 */
 	public  function autoload($class)
 	{
-		$filename=JJPATH.'/core/util/'.$class.'.php';
+		$filename=COREPATH.'/util/'.$class.'.php';
         if(!$this->fileExists($filename))
         {
-        $filename=JJPATH.'/lib/'.$class.'.php';
+        $filename=COREPATH.'/lib/'.$class.'.php';
         }
 	    if(!$this->fileExists($filename))
         {
@@ -39,7 +39,7 @@ class JJBase
         }
 	   if(!$this->fileExists($filename))
         {
-        $filename=JJPATH.'/core/dao/'.$class.'.php';
+        $filename=COREPATH.'/dao/'.$class.'.php';
         }
         if($this->fileExists($filename))
         {
@@ -55,7 +55,7 @@ class JJBase
 	{
 	   if(!isset(self::$instance['Dispatch']))
 		{
-			require_once(JJPATH."/core/comm/JJDispatch.php");
+			require_once(COREPATH."/comm/JJDispatch.php");
 			self::$instance['Dispatch']=new JJDispatch();
 		}
 		return self::$instance['Dispatch'];
@@ -68,7 +68,7 @@ class JJBase
 	{
 		if(!isset(self::$instance['NotORM']))
 		{
-			require_once(JJPATH."/core/dao/NotORM.php");
+			require_once(COREPATH."/dao/NotORM.php");
 			self::$instance['NotORM']=new NotORM();
 		}
 		return self::$instance['NotORM'];
@@ -86,7 +86,7 @@ class JJBase
 		}
 		if(!isset(self::$instance['Cache'][$type]))
 		{
-			require_once(JJPATH."/core/cache/JJCache.php");
+			require_once(COREPATH."/cache/JJCache.php");
 			self::$instance['Cache'][$type]=new JJCache($type);
 		}
 		return self::$instance['Cache'][$type];
@@ -100,11 +100,11 @@ class JJBase
 	{
 		if(!isset(self::$instance['coreutil'][$class]))
 		{
-			$filename=JJPATH.'/core/util/'.$class.'.php';
+			$filename=COREPATH.'/util/'.$class.'.php';
 			if(!$this->fileExists($filename))
 			{
 				$class='JJ'.ucfirst($class);
-				$filename=JJPATH.'/core/util/'.$class.'.php';
+				$filename=COREPATH.'/util/'.$class.'.php';
 			}
 			if (!$this->fileExists($filename))return false;
 			require_once($filename);
@@ -121,11 +121,11 @@ class JJBase
 	{
 		if(!isset(self::$instance['lib'][$class]))
 		{
-			$filename=JJPATH.'/lib/'.$class.'.php';
+			$filename=COREPATH.'/lib/'.$class.'.php';
 			if(!$this->fileExists($filename))
 			{
 				$class="JJ".ucfirst($class);
-				$filename=JJPATH.'/lib/'.$class.'.php';
+				$filename=COREPATH.'/lib/'.$class.'.php';
 			}
 			if (!$this->fileExists($filename))return false;
 			require_once($filename);
@@ -255,7 +255,7 @@ class JJBase
 	{
 	    if(!isset(self::$instance['oauth2']))
 		{
-			$filename=JJPATH.'/core/oauth/JJOAuth2.php';
+			$filename=COREPATH.'/oauth/JJOAuth2.php';
 			if(!$this->fileExists($filename))throw new JJException('OAuth2不存在');
 			require_once($filename);
 			self::$instance['oauth2']=new JJOAuth2();

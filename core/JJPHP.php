@@ -6,8 +6,9 @@
  * @author     zhengyouxiangxiang <zhengyouxiang00@gmail.com>
  * @copyright   www.111work.com
  */
-include_once 'core/util/JJException.php';
-include_once 'core/comm/JJBase.php';
+!defined("COREPATH") && define("COREPATH",dirname(__FILE__));
+include_once COREPATH.'/util/JJException.php';
+include_once COREPATH.'/comm/JJBase.php';
 class JJPHP extends JJBase
 {
 	/**
@@ -15,9 +16,9 @@ class JJPHP extends JJBase
 	 */
 	public static function importComm()
 	{
-		include_once 'core/comm/Model.php';
-		include_once 'core/comm/Service.php';
-		include_once 'core/comm/Controller.php';
+		include_once COREPATH.'/comm/Model.php';
+		include_once COREPATH.'/comm/Service.php';
+		include_once COREPATH.'/comm/Controller.php';
 	}
 	/**
 	 * 导入其他的一些类
@@ -26,8 +27,8 @@ class JJPHP extends JJBase
 	{
 		include_once JJPATH.'/config/JJCacheConfig.php';
        include_once JJPATH.'/config/JJDbConfig.php';
-		include_once 'core/util/JJGlobalFun.php';
-       include_once 'core/cache/JJCache.php';
+		include_once COREPATH.'/util/JJGlobalFun.php';
+       include_once  COREPATH.'/cache/JJCache.php';
 	}
 	/**
 	 * 导入web/contrlib

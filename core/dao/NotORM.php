@@ -7,7 +7,7 @@
  * @license http://www.apache.org/licenses/LICENSE-2.0 Apache License, Version 2.0
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License, version 2 (one or other)
  */
-include_once dirname(__FILE__) . "/../../config/JJDbconfig.php";
+
 include_once dirname(__FILE__) . "/NotORM/Structure.php";
 include_once dirname(__FILE__) . "/NotORM/Cache.php";
 include_once dirname(__FILE__) . "/NotORM/Literal.php";
