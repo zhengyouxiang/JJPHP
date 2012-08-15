@@ -22,9 +22,10 @@
   |  ├dao			数据访问<br>
   |  ├oauth	                oauth<br>
   |  ├util		        核心辅助类<br>
-  |  ├JJPHP.php			最核心类<br>
+  |  ├lib			     采用类库<br>
+  |  ├JJPHP.php  		最核心类<br>
   |<br>
-  |  -lib                         常用类库<br>
+  |  -otherweb                    另一个网站 里面有config，web等<br>
   | <br>
   |  -web                         项目目录<br>
   |  ├contrlib                   自定义controller<br>
