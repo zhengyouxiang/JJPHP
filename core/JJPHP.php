@@ -35,11 +35,15 @@ class JJPHP extends JJBase
 	 */
 	public static function importContrlib()
 	{
+	
 		$contrlib=JJPATH.'/web/contrlib/';
-		$listfile=scandir($contrlib);
-		foreach ($listfile as $filename)
+		if(is_dir($contrlib))
 		{
-			if(!is_dir($filename))include_once $contrlib.$filename;
+		   $listfile=scandir($contrlib);
+		  foreach ($listfile as $filename)
+	    	{
+			  if(!is_dir($filename))include_once $contrlib.$filename;
+		   }
 		}
 	}
 	/**
