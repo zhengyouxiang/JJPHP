@@ -8,7 +8,7 @@
  */
 include_once dirname(__FILE__) . "/lib/OAuth2.php";
 include_once  dirname(__FILE__) . "/../dao/NotORM.php";
-include_once  dirname(__FILE__) . "/../../web/util/OAuth2Util.php";
+include_once  JJPATH . "/web/util/OAuth2Util.php";
 class JJOAuth2 extends  OAuth2
 {
 	private $db;
