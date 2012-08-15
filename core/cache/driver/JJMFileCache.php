@@ -10,7 +10,7 @@ class JJMFileCache {
     private $cache_path;
 	function __construct() 
 	{
-		$this->cache_path=dirname(__FILE__)."/../path/multi";
+		$this->cache_path=JJPATH."/data/cachepath/multi";
 	}
 	function load($key) {
 		$key = $this->get_cache_filename($key);

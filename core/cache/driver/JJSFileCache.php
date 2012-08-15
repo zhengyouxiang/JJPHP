@@ -11,11 +11,11 @@ class JJSFileCache {
 	function __construct($filename="") {
 		if($filename==""||!isset($filename))
 		{
-			$filename=dirname(__FILE__)."/../path/simple/jjsfilecache.cache";
+			$filename=JJPATH."/data/cachepath/simple/jjsfilecache.cache";
 		}
 		else
 		{
-			$filename=dirname(__FILE__)."/../path/simple/".$filename.".cache";
+			$filename=JJPATH."/data/cachepath/simple/".$filename.".cache";
 		}
 		$this->filename = $filename;
 		$this->data = unserialize(@file_get_contents($filename)); // @ - file may not exist
