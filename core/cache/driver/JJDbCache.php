@@ -6,7 +6,7 @@
  * @author     zhengyouxiangxiang <zhengyouxiang00@gmail.com>
  * @copyright   www.111work.com
  */
-include_once  dirname(__FILE__) . "/../../dao/NotORM.php";
+include_once  COREPATH."/dao/NotORM.php";
 class JJDbCache {
 	private $notORM;
 	function __construct() {
